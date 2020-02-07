@@ -16,7 +16,6 @@ vals = set()
 for p in full_patts:
 	p_string = "".join([x for t in zip(list(p), map(lambda y: str(y), range(-1, -2*n, -1))) for x in t] + [')'])
 	p_string = p_string.replace('(', '*abs(')[1:]
-	#p_string = p_string.replace(')', ')*')[:-1]
 	print(p_string, eval(p_string))
 	vals.add(eval(p_string))
 
